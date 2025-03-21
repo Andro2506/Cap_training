@@ -5,22 +5,18 @@ class Laptop{
 	double price;
 	int ram;
 	
-//	protected Laptop(String brand, double price, int ram) {
-//		this.brand = brand;
-//		this.price= price;
-//		this.ram = ram;
+	protected Laptop(String brand, double price, int ram) {
+		this.brand = brand;
+		this.price= price;
+		this.ram = ram;
+	}
+	
+//	protected void display() {
+//		System.out.println(this.brand);
+//		System.out.println(this.price);
+//		System.out.println(this.ram);
+////		System.out.println("Object address: "+this);
 //	}
-	
-	Laptop(){
-		System.out.println("Hello, I'm a no-arg user defined constructor!");
-	}
-	
-	protected void display() {
-		System.out.println(this.brand);
-		System.out.println(this.price);
-		System.out.println(this.ram);
-//		System.out.println("Object address: "+this);
-	}
 	
 	
 }
@@ -28,14 +24,12 @@ class Laptop{
 
 public class Driver {
 	public static void main(String[] args) {
-		Laptop m1 = new Laptop();
-		m1.brand = "ASUS";
-		m1.price = 96560.61;
-		m1.ram=16;
-		m1.display();
+		Laptop m1 = new Laptop("Dell", 65000,8);
+//		m1.display();
+		System.out.println(m1.brand+"\t"+m1.price+"\t"+m1.ram);
 		
-//		Laptop m2 = new Laptop();
-//		m2.display();
+		Laptop m2 = new Laptop("Hp", 55000,8);
+		System.out.println(m2.brand+"\t"+m2.price+"\t"+m2.ram);
 //		
 //		System.out.println(m1==m2);
 	}
